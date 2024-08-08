@@ -2,6 +2,10 @@
 
 The official implementation of the paper "Breaking the Bottleneck on Graphs with Structured State Spaces" (CIKM 2024).
 
+<p align="middle">
+<img src="s4g.jpg" height="350">
+</p>
+
 ## Dependencies
 ### `Conda` environment
 On Linux, prepare the `conda` virtual environment as follows:
