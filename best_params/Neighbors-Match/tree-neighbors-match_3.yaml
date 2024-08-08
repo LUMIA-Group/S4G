@@ -1,0 +1,92 @@
+program: main.py
+method: grid
+project: "S4GNN"
+entity: ""
+
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - "--wandb_folder"
+  - "wandb"
+  - "--run_mode"
+  - "normal"
+
+parameters:
+  task_type:
+    values: ["graph"]
+  pool_head:
+    values: ["root"]
+  dataset:
+    values: ["tree-neighbors-match_3"]
+  batch_size:
+    values: [32]
+
+  model:
+    values: ["S4G"]
+  ssm_type:
+    values: ["hop_add"]
+  input_encoder:
+    values: ["DiscreteEncoder"]
+  edge_encoder:
+    values: ["None"]
+  involve_edge:
+    values: [False]
+
+  seq_encoder:
+    values: ["S4"]
+  graph_encoder:
+    values: ["None"]
+  dropout_kernel:
+    values: [0]
+  max_length:
+    values: ['full']
+  ssm_head:
+    values: [4]
+  learning_rate_ssm:
+    values: [0]
+  unroll_loading:
+    values: ["online"]
+
+  num_layers:
+    values: ["None"]
+  hidden_channel:
+    values: [128]
+  dropout:
+    values: [0]
+
+  optimizer:
+    values: ["Adam"]
+  lr_factor:
+    values: [0.5]
+  lr_patience:
+    values: [50]
+  learning_rate:
+    values: [0.0001]
+  weight_decay:
+    values: [0]
+  max_epochs:
+    values: [1000]
+  patience:
+    values: [200]
+  stop_item:
+    values: ["metric_val"]
+  log_freq:
+    values: [1]
+  seed:
+    values: [0]
+  split_idx:
+    values: [0]
+  repeat_idx:
+    values: [0]
+
+  ssm_init:
+    values: ['legs']
+  pe:
+    values: ['None']
+  rw_dim:
+    values: [16]
+  lap_dim:
+    values: [16]
+  sample_nodes:
+    values: ['None']

@@ -1,0 +1,14 @@
+ogb==1.3.6
+wandb==0.15.3
+
+# requirements from layer/s4.py
+pytorch-lightning==1.9.3
+einops
+numpy
+scipy
+
+# might be useful
+networkx
+pandas
+scikit-learn
+matplotlib

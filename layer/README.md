@@ -1,0 +1,1 @@
+The `state_spaces` folder is from [S4 models repo](https://github.com/HazyResearch/state-spaces), we import `SSM CUDA Kernels` from it; the `s4.py` is a standalone file for `S4` modules (copied from `state_spaces` repo), we import some modules from it.

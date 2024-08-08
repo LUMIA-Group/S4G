@@ -1,0 +1,11 @@
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+wandb/
+datasets/
+local/
+configs.yaml
+test.ipynb
+test.py
+sync.sh

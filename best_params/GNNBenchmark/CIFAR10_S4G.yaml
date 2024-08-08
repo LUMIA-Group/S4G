@@ -1,0 +1,90 @@
+program: main.py
+method: grid
+project: "S4GNN"
+entity: ""
+
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - "--wandb_folder"
+  - "wandb"
+  - "--run_mode"
+  - "normal"
+
+parameters:
+  task_type:
+    values: ["graph"]
+  pool_head:
+    values: ["graph"]
+  dataset:
+    values: ["CIFAR10"]
+  batch_size:
+    values: [64]
+
+  model:
+    values: ["S4G"]
+  ssm_type:
+    values: ["hop_add"]
+  input_encoder:
+    values: ["LinearEncoder"]
+  edge_encoder:
+    values: ["LinearEncoder"]
+  involve_edge:
+    values: [True]
+
+  seq_encoder:
+    values: ["S4"]
+  graph_encoder:
+    values: ["None"]
+  dropout_kernel:
+    values: [0.3]
+  max_length:
+    values: ['full']
+  ssm_head:
+    values: [16]
+  learning_rate_ssm:
+    values: [0]
+  unroll_loading:
+    values: ["online"]
+
+  num_layers:
+    values: [16]
+  hidden_channel:
+    values: [192]
+  dropout:
+    values: [0]
+
+  lr_factor:
+    values: [0.5]
+  lr_patience:
+    values: [10]
+  learning_rate:
+    values: [0.001]
+  weight_decay:
+    values: [0]
+  max_epochs:
+    values: [300]
+  patience:
+    values: [20]
+  stop_item:
+    values: ["metric_val"]
+  log_freq:
+    values: [1]
+  seed:
+    values: [0,1,2,3,4]
+  split_idx:
+    values: [0]
+  repeat_idx:
+    values: [0]
+
+  ssm_init:
+    values: ['legs']
+  pe:
+    values: ['None']
+  rw_dim:
+    values: [16]
+  lap_dim:
+    values: [16]
+  sample_nodes:
+    values: ['None']
